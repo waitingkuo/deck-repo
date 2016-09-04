@@ -9,12 +9,13 @@ TAR_FILENAME=etcd-$VERSION-$PLATFORM-amd64.tar.gz
 DIR=etcd-$VERSION-$PLATFORM-amd64
 
 echo "Downloading $URL"
-curl -L $URL -o /tmp/
-
-
 cd /tmp
-tar zxvf TAR_FILENAME
-cd /tmp/$DIR
-mc cp etcd minio/deck/etcd/etcd
-mc cp etcdctl minio/deck/etcd/etcdctl
+curl -L $URL -o etcd.tar.gz
+tar zxvf etcd.tar.gz
+cd $DIR
+
+ROOT=/var/www/html/deck
+mkdir -p $ROOT/etcd
+cp etcd $ROOT/etcd/etcd
+cp etcdctl $ROOT/etcd/etcdctl
 
