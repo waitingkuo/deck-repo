@@ -5,23 +5,35 @@ DIR=kubernetes
 
 echo "Downloading $URL"
 cd /tmp
-curl -L $URL -o kubernetes.tar.gz
-tar zxvf kubernetes.tar.gz
+#curl -L $URL -o kubernetes.tar.gz
+#tar zxvf kubernetes.tar.gz
 cd $DIR
 
 cd /tmp/$DIR/server
-tar zxvf kubernetes-server-linux-amd64.tar.gz
+#tar zxvf kubernetes-server-linux-amd64.tar.gz -C linux
 cd /tmp/$DIR/server/kubernetes/server/bin
 
 ROOT=/var/www/html/deck
-mkdir -p $ROOT/kubernetes
-cp kubectl $ROOT/kubernetes/kubectl
-cp kubelet $ROOT/kubernetes/kubelet
-cp kubemark $ROOT/kubernetes/kubemark
-cp kube-dns $ROOT/kubernetes/kube-dns
-cp kube-scheduler $ROOT/kubernetes/kube-scheduler
-cp kube-proxy $ROOT/kubernetes/kube-proxy
-cp kube-apiserver $ROOT/kubernetes/kube-apiserver
-cp federation-apiserver $ROOT/kubernetes/federation-apiserver
-cp hyperkube $ROOT/kubernetes/hyperkube
-cp kube-controller-manager $ROOT/kubernetes/kube-controller-manager
+
+# FIXME should make variable more consistent with other files i.e. $ROOT, $BASE, ...etc
+
+#tar zxvf kubernetes-server-linux-amd64.tar.gz
+cd /tmp/$DIR/server/kubernetes/server/bin
+
+BASE=$ROOT/linux/amd64/kubernetes
+mkdir -p $BASE
+cp kubectl $BASE/kubectl
+cp kubelet $BASE/kubelet
+cp kubemark $BASE/kubemark
+cp kube-dns $BASE/kube-dns
+cp kube-scheduler $BASE/kube-scheduler
+cp kube-proxy $BASE/kube-proxy
+cp kube-apiserver $BASE/kube-apiserver
+cp federation-apiserver $BASE/federation-apiserver
+cp hyperkube $BASE/hyperkube
+cp kube-controller-manager $BASE/kube-controller-manager
+
+BASE=$ROOT/darwin/amd64/kubernetes
+mkdir -p $BASE
+cp /tmp/$DIR/platforms/darwin/amd64/kubectl $BASE/kubectl
+
