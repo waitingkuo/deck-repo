@@ -15,7 +15,9 @@ tar zxvf etcd.tar.gz
 cd $DIR
 
 ROOT=/var/www/html/deck
-mkdir -p $ROOT/etcd
-cp etcd $ROOT/etcd/etcd
-cp etcdctl $ROOT/etcd/etcdctl
+BASE=$ROOT/linux/amd64/etcd
+
+mkdir -p $BASE
+cp etcd $BASE/etcd
+cp etcdctl $BASE/etcdctl
 
