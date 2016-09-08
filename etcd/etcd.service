@@ -1,0 +1,6 @@
+[Service]
+Environment=ETCD_DATA_DIR=/var/lib/etcd
+Environment=ETCD_NAME=%m
+ExecStart=/usr/local/bin/etcd
+Restart=always
+
