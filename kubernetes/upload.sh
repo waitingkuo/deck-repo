@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.3.6/kubernetes.tar.gz
+URL=https://github.com/kubernetes/kubernetes/releases/download/v1.3.7/kubernetes.tar.gz
 DIR=kubernetes
 
 echo "Downloading $URL"
