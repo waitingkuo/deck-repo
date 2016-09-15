@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.3/kubernetes.tar.gz
 URL=https://github.com/kubernetes/kubernetes/releases/download/v1.3.7/kubernetes.tar.gz
 DIR=kubernetes
 
