@@ -2,6 +2,8 @@
 
 PLATFORM=linux
 VERSION=v3.0.7
+VERSION=v3.0.8
+VERSION=v3.0.9
 
 
 URL=https://github.com/coreos/etcd/releases/download/$VERSION/etcd-$VERSION-$PLATFORM-amd64.tar.gz

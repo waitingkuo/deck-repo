@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # need to find a way to download specific version
+URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.7/kubernetes.tar.gz
 URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.6/kubernetes.tar.gz
 URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.5/kubernetes.tar.gz
 #URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.3/kubernetes.tar.gz
