@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # need to find a way to download specific version
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.8/kubernetes.tar.gz
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.7/kubernetes.tar.gz
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.6/kubernetes.tar.gz
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.5/kubernetes.tar.gz
-#URL=https://github.com/kubernetes/kubernetes/releases/download/v1.4.0-beta.3/kubernetes.tar.gz
-URL=https://github.com/kubernetes/kubernetes/releases/download/v1.3.7/kubernetes.tar.gz
+
+VERSION=v1.3.7
+VERSION=v1.4.0-beta.5
+VERSION=v1.4.0-beta.6
+VERSION=v1.4.0-beta.7
+VERSION=v1.4.0-beta.8
+URL=https://github.com/kubernetes/kubernetes/releases/download/$VERSION/kubernetes.tar.gz
+
 DIR=kubernetes
 
 echo "Downloading $URL"
