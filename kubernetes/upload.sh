@@ -7,6 +7,7 @@ VERSION=v1.4.0-beta.5
 VERSION=v1.4.0-beta.6
 VERSION=v1.4.0-beta.7
 VERSION=v1.4.0-beta.8
+VERSION=v1.4.0-beta.9
 URL=https://github.com/kubernetes/kubernetes/releases/download/$VERSION/kubernetes.tar.gz
 
 DIR=kubernetes
